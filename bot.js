@@ -9,9 +9,9 @@ const bot = new Discord.Client();
 var Wolfram = client;
 
 //Gerekli Eklentiler
-Jimp = require('jimp'),
-  fs = require('fs'),
-  moment = require('moment'),
+Jimp = require('jimp');
+fs = require('fs');
+moment = require('moment');
 
 //Ayarlar dosyamızı ; bot, Wolfram, client ile bağladık.
 const ayarlar = require('./ayarlar.json');
