@@ -15,7 +15,6 @@ moment = require('moment');
 
 //Ayarlar dosyamızı ; bot, Wolfram, client ile bağladık.
 const ayarlar = require('./ayarlar.json');
-{  Wolfram } = require('./ayarlar'),
 
 //Ayarlar Dosyasındakiler
 var prefix = ayarlar.prefix;
