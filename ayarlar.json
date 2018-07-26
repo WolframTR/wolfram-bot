@@ -5,7 +5,7 @@
 "botadı": "🐺 Wolfram 🐺",
 "telifhakkı": "Copyright ©2018 | 🐺 Wolfram 🐺",
 "sürüm": "1.0",
-"girişrolü": "Üye"
+"girişrolü": "Üye",
 "logkanalı": "wolfram-log",
 "dmkanalı": "wolfram-dm",
 "botuekleyenlerkanalı": "472010860802474006",
@@ -13,4 +13,4 @@
 "basarılı": "<:basarili:361601989056004096>",
 "basarısız": "<:basarisiz:361602032143958018>",
 "wolfram": "<:wolfram:471317540707106838>"
-};
+}
