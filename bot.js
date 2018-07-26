@@ -7,7 +7,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const bot = new Discord.Client();
 var Wolfram = client;
-var bot = Wolfram;
 
 //Gerekli Eklentiler
 Jimp = require('jimp'),
