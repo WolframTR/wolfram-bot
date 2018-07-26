@@ -1,22 +1,16 @@
 {
-    "bot": {
-        "prefix": "!",
-        "token": "NDcxMzM1NTIwMDk4NzEzNjAw.DjtMRg.umjomX74sj9AEv2kN2iYIoMPyCU",
-        "kurucu": "274551537139712001",
-        "botadı": "🐺 Wolfram 🐺",
-        "telifhakkı": "Copyright ©2018 | 🐺 Wolfram 🐺",
-        "sürüm": "1.0",
-        "girişrolü": "Üye"
-    },
-    "kanallar": {
-        "logkanalı": "wolfram-log",
-        "dmkanalı": "wolfram-dm",
-        "botuekleyenlerkanalı": "472010860802474006",
-        "botuatanlarkanalı": "472010904754716673"
-    },
-    "emojiler": {
-        "basarılı": "<:basarili:361601989056004096>",
-        "basarısız": "<:basarisiz:361602032143958018>",
-        "wolfram": "<:wolfram:471317540707106838>"
-    },
+"prefix": "!",
+"token": "NDcxMzM1NTIwMDk4NzEzNjAw.DjtMRg.umjomX74sj9AEv2kN2iYIoMPyCU",
+"kurucu": "274551537139712001",
+"botadı": "🐺 Wolfram 🐺",
+"telifhakkı": "Copyright ©2018 | 🐺 Wolfram 🐺",
+"sürüm": "1.0",
+"girişrolü": "Üye"
+"logkanalı": "wolfram-log",
+"dmkanalı": "wolfram-dm",
+"botuekleyenlerkanalı": "472010860802474006",
+"botuatanlarkanalı": "472010904754716673",
+"basarılı": "<:basarili:361601989056004096>",
+"basarısız": "<:basarisiz:361602032143958018>",
+"wolfram": "<:wolfram:471317540707106838>"
 }
