@@ -572,7 +572,7 @@ Wolfram.on("guildMemberRemove", async member => {
 });
 //[======================]  Kodlar Bitti  [======================]
 
-Wolfram.login(${token});
+Wolfram.login("${token}");
 
 
 //BOT BİTTİ :)
