@@ -13,12 +13,12 @@ Jimp = require('jimp'),
   fs = require('fs'),
   moment = require('moment'),
 
-  //Ayarlar dosyamızı ; bot, Wolfram, client ile bağladık.
-  const ayarlar = require('./ayarlar.json');
-{ bot, Wolfram, client } = require('./ayarlar'),
+//Ayarlar dosyamızı ; bot, Wolfram, client ile bağladık.
+const ayarlar = require('./ayarlar.json');
+{  Wolfram } = require('./ayarlar'),
 
-  //Ayarlar Dosyasındakiler
-  var prefix = ayarlar.prefix;
+//Ayarlar Dosyasındakiler
+var prefix = ayarlar.prefix;
 var token = ayarlar.token;
 var kurucu = ayarlar.kurucu;
 var sürüm = ayarlar.sürüm;
@@ -517,6 +517,7 @@ Wolfram.on("message", message => {
     }
   }
 });
+
 Wolfram.on("guildMemberAdd", async member => {
   const veri = client.provider.get(member.guild.id, "hosGeldinK", []);
   if (veri == !true) return;
@@ -571,7 +572,7 @@ Wolfram.on("guildMemberRemove", async member => {
       }, 10000);
     }
   }
-})
+});
 //[======================]  Kodlar Bitti  [======================]
 
 Wolfram.login(${token});
