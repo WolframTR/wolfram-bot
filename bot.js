@@ -92,7 +92,6 @@ Wolfram.on("message", message => {
       .setDescription(`Sunucu Resmi:`)
       .setImage(`${message.guild.iconURL} `)
       .setColor("RANDOM"));
-    .setFooter("${telifhakkı}")
   }
 });
 
@@ -109,7 +108,6 @@ Wolfram.on("message", message => {
     message.channel.sendEmbed(new Discord.RichEmbed()
       .setDescription(`<a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212>`)
       .setColor("RANDOM"));
-    .setFooter("${telifhakkı}")
   }
 });
 
