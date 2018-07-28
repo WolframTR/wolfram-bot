@@ -48,9 +48,9 @@ client.on("message", async msg => {
 
 
 client.on("ready", () => {
-  bot.user.setStatus('STREAMING');
-  bot.channels.get("471987685511397386").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!** \n**Gecikme:** ${client.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**${botadı} bot hazır.**`)
-  bot.user.setGame(`🐺 ${prefix}yardım ${prefix}davet 🐺`, "https://www.twitch.tv/enesonurata");
+  client.user.setStatus('online');
+  client.channels.get("471987685511397386").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!** \n**Gecikme:** ${client.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**${botadı} bot hazır.**`)
+  client.user.setGame(`🐺 ${prefix}yardım ${prefix}davet 🐺`, "https://www.twitch.tv/enesonurata");
   console.log("Bot Basariyla Baslatildi")
 });
 
