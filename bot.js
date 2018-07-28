@@ -1,10 +1,9 @@
 //Discord.js Kütüphanesini çağırdık
 const Discord = require('discord.js');
 
-//Bot, Client, Wolfram'ı birbirine bağladım
+//Client ve Bot'u atadım
 const client = new Discord.Client();
 const bot = new Discord.Client();
-const Wolfram = new Discord.Client();
 
 //Gerekli Eklentiler
 Jimp = require('jimp');
@@ -30,7 +29,7 @@ var başarılı = ayarlar.basarılı;
 var başarısız = ayarlar.basarısız;
 
 //DOSYALARI KOMUT OLARAK ALGILAMASI ICIN
-Wolfram.on("message", async msg => {
+client.on("message", async msg => {
   if (msg.author.bot) return;
   if (msg.content.indexOf(prefix) !== 0) return;
 
@@ -47,14 +46,14 @@ Wolfram.on("message", async msg => {
 // KODLARIMIZ
 
 
-Wolfram.on("ready", () => {
+client.on("ready", () => {
   bot.user.setStatus('streaming');
-  bot.channels.get("471987685511397386").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!** \n**Gecikme:** ${bot.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**${botadı} bot hazır.**`)
+  bot.channels.get("471987685511397386").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!** \n**Gecikme:** ${client.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**${botadı} bot hazır.**`)
   bot.user.setGame(`🐺 ${prefix}yardım ${prefix}davet 🐺`, "https://www.twitch.tv/enesonurata");
   console.log("Bot Basariyla Baslatildi")
 });
 
-Wolfram.on('guildCreate', guild => {
+client.on('guildCreate', guild => {
   let channel = bot.channels.get("${botuekleyenlerkanalı}")
   const embed = new Discord.RichEmbed()
     .setColor("Green")
@@ -69,7 +68,7 @@ Wolfram.on('guildCreate', guild => {
   channel.send(embed);
 });
 
-Wolfram.on('guildDelete', guild => {
+client.on('guildDelete', guild => {
   let channel = bot.channels.get("${botuatanlarkanalı}")
   const embed = new Discord.RichEmbed()
     .setColor("Red")
@@ -84,7 +83,7 @@ Wolfram.on('guildDelete', guild => {
   channel.send(embed);
 });
 
-Wolfram.on('guildCreate', async guild => {
+client.on('guildCreate', async guild => {
   const girismesaj = [
     '**${botadı}** sunucunuza başarıyla eklendi.',
     `Botumuzun özelliklerini öğrenmek için ${prefix}yardım yazabilirsiniz.`,
@@ -92,7 +91,7 @@ Wolfram.on('guildCreate', async guild => {
   guild.owner.send(girismesaj)
 });
 
-Wolfram.on("message", message => {
+client.on("message", message => {
   if (message.content.toLowerCase() === prefix + "parti") {
     message.channel.sendEmbed(new Discord.RichEmbed()
       .setDescription(`<a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212>`)
@@ -100,20 +99,20 @@ Wolfram.on("message", message => {
   }
 });
 
-Wolfram.on('message', async msg => {
+client.on('message', async msg => {
   if (msg.content.toLowerCase() === '<@471335520098713600> yardım') {
     await msg.react('🇹');
     msg.react('🇲');
   }
 });
 
-Wolfram.on('message', msg => {
+client.on('message', msg => {
   if (msg.content.startsWith(prefix + "çekiliş")) {
     msg.channel.send(`Çekilişi Kazanan: **${msg.guild.members.random().displayName}**`);
   }
 });
 
-Wolfram.on('message', msg => {
+client.on('message', msg => {
   if (msg.content.startsWith(prefix + "şikayet")) {
     let mesaj = msg.content.substring(2 + 3);
     msg.delete();
@@ -121,10 +120,10 @@ Wolfram.on('message', msg => {
   }
 });
 
-Wolfram.on("message", message => {
-  const dmchannel = bot.channels.find("name", "${dmkanalı}");
+client.on("message", message => {
+  const dmchannel = client.channels.find("name", "${dmkanalı}");
   if (message.channel.type === "dm") {
-    if (message.author.id === bot.user.id) return;
+    if (message.author.id === client.user.id) return;
     dmchannel.sendMessage("", {
       embed: {
         color: 000007,
@@ -136,7 +135,7 @@ Wolfram.on("message", message => {
   if (message.channel.bot) return;
 });
 
-Wolfram.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', member => {
   let guild = member.guild;
   let joinRole = guild.roles.find('name', '${girişrolü}');
   member.addRole(joinRole);
@@ -152,7 +151,7 @@ Wolfram.on('guildMemberAdd', member => {
   channel.sendEmbed(embed);
 });
 
-Wolfram.on('guildMemberRemove', member => {
+client.on('guildMemberRemove', member => {
   const channel = member.guild.channels.find('name', '${logkanalı}');
   if (!channel) return;
   const embed = new Discord.RichEmbed()
@@ -164,7 +163,7 @@ Wolfram.on('guildMemberRemove', member => {
   channel.sendEmbed(embed);
 });
 
-Wolfram.on("message", message => {
+client.on("message", message => {
 
   if (message.content.toLowerCase() === prefix + "davet") {
     const embed = new Discord.RichEmbed()
@@ -188,4 +187,4 @@ Wolfram.on("message", message => {
   }
 });
 
-Wolfram.login('${token}');
+client.login('${token}');
