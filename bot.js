@@ -6,7 +6,7 @@ const Discord = require("discord.js");
 //Bot, Client, Wolfram'ı birbirine bağladım
 const client = new Discord.Client();
 const bot = new Discord.Client();
-var Wolfram = client;
+var Wolfram = new Discord.Client();
 
 //Gerekli Eklentiler
 Jimp = require('jimp');
@@ -139,6 +139,8 @@ Wolfram.on("message", message => {
       message.channel.sendMessage(` :white_check_mark: Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
         console.log(`Yeniden başlıyorum..`);
         message.guild.createChannel('${logkanalı}');
+        let GirişRolü = guild.roles.find('name', '${girişrolü}');
+        member.addRole(GirişRolü);
       })
     }
   }
@@ -358,7 +360,7 @@ Wolfram.on("message", message => {
   }
 
   if (message.content.toLowerCase() === "wolfram") {
-    message.reply("Yardıma mı ihtiyacın var?\n ${prefix}yardım")
+    message.reply("Yardıma mı ihtiyacın var?\n **${prefix}yardım**")
   }
 
   if (message.content.toLowerCase() === prefix + 'yenile') {
@@ -573,6 +575,3 @@ Wolfram.on("guildMemberRemove", async member => {
 //[======================]  Kodlar Bitti  [======================]
 
 Wolfram.login("${token}");
-
-
-//BOT BİTTİ :)
