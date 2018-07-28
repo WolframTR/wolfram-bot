@@ -5,10 +5,11 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const bot = new Discord.Client();
 
+/*
 //Gerekli Eklentiler
 Jimp = require('jimp');
 fs = require('fs');
-moment = require('moment');
+moment = require('moment'); */
 
 //Ayarlar dosyamız
 const ayarlar = require('./ayarlar.json');
