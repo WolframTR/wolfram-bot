@@ -6,7 +6,7 @@ const Discord = require("discord.js");
 //Bot, Client, Wolfram'ı birbirine bağladım
 const client = new Discord.Client();
 const bot = new Discord.Client();
-var Wolfram = new Discord.Client();
+const Wolfram = new Discord.Client();
 
 //Gerekli Eklentiler
 Jimp = require('jimp');
@@ -37,12 +37,12 @@ Wolfram.on("message", async msg => {
   if (msg.content.indexOf(prefix) !== 0) return;
 
   const args = msg.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
+  const komut = args.shift().toLowerCase();
   const event = msg.content.toLower
 
   try {
-    let commandFile = require(`./komutlar/${command}.js`);
-    commandFile.run(client, msg, args);
+    let komutDosyası = require(`./komutlar/${komut}.js`);
+    komutDosyası.run(client, msg, args);
   } catch (err) {}
 });
 
