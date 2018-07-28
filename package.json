@@ -9,7 +9,7 @@
   "author": "EnesOnurAta",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "github:hydrabolt/discord.js",
+    "discord.js": "github:discordjs/discord.js/",
     "discord.js-commando": "^0.10.0",
     "discord.js-lavalink": "^2.0.2",
     "jimp": "^0.2.28",
