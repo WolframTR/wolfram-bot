@@ -1,5 +1,5 @@
 //Discord.js Kütüphanesini çağırdık
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 //Client ve Bot'u atadım
 const client = new Discord.Client();
@@ -188,4 +188,4 @@ client.on("message", message => {
   }
 });
 
-client.login('${token}');
+client.login(${token});
